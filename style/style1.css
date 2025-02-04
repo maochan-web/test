@@ -1,0 +1,328 @@
+@charaset "UTF-8";
+/* HOME画面用 CSS*/
+
+html{
+    font-size:100%; /*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box; /*余白や線を幅や高さに含める*/
+}
+
+/*ページ全体 CSS*/
+
+body{
+     margin:0;
+     padding:0;
+     font-family:"Yu Gothic",Yu Gothic,"MS Pゴシック"Meiryo;
+}
+
+/*ヘッダー CSS*/
+
+header{justify-content:space-between;       
+       background-color:###;
+       display:flex;
+       margin:0;
+       padding:0  2%;
+       align-items:center;
+       
+}
+#rogo{
+      max-width:100%; /*画像が親要素からはみ出すのを防ぐ*/
+      height:auto;
+}
+
+/*ナビゲーション CSS*/
+
+ul{display:flex;
+   list-style:none;
+}
+
+nav{margin-left;auto;
+}
+
+.navi{margin-left:15px;
+}
+
+a{text-decoration:none;
+  color:black;
+  font-size:13px;
+}
+
+a:hover{opacity:0.5;
+}
+
+/*メインコンテンツ CSS*/
+
+main{  background-color:###;
+       margin:0;
+
+}
+
+
+
+
+
+
+
+
+/*フッター CSS*/
+
+footer{margin:0;
+       padding:0  2%;
+       height:5%;
+       background-color:###;
+       display:flex;
+       justify-content:space-between;
+       align-items:center;
+}
+
+#jikoku_now{font-size:10px;}
+
+
+.icon{margin-left:8px;
+}
+
+.moji{font-size:10px;}
+
+
+
+.scroll{
+
+
+
+
+
+}
+
+
+
+/* 右からの無限ループ */
+@keyframes infinity-scroll-left {
+from {
+  transform: translateX(0);
+}
+  to {
+  transform: translateX(-100%);
+}
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+  width:100%;
+}
+
+
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 35s infinite linear 0.5s both;
+
+
+}
+.scroll-infinity__item {
+  width: calc(100vw / 6);
+}
+
+.scroll-infinity__item>img {
+  width: 100%;
+}
+
+.sample{
+    flex-shrink: 0;
+}
+
+
+/* 右からの無限ループ画像設定ホバー時上段 */
+.no1 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no1:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no2 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no2:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no3 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no3:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no4 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no4:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no5 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no5:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no6 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no6:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+
+/* 左からの無限ループ */
+@keyframes infinity-scroll-right {
+from {
+  transform: translateX(-100%);
+}
+  to {
+  transform: translateX(0%);
+}
+}
+.scroll-infinity__list--right{
+  animation :infinity-scroll-right 35s infinite linear 0.5s both;
+
+}
+
+/* 左からの無限ループ画像設定ホバー時下段 */
+.no7 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no7:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no8 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no8:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no9 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no9:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no10 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no10:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no11 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no11:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+.no12 img{width: 100%;
+  cursor: pointer;
+  transition-duration: 0.8s;}
+
+.no12:hover img{
+transform: rotateY( 360deg );
+  transition-duration: 0.8s;}
+
+
+
+
+
+
+/* 無限ループの一時停止 */
+.scroll-infinity__wrap:hover .scroll-infinity__list--right{
+  animation-play-state: paused;
+}
+.scroll-infinity__wrap:hover .scroll-infinity__list--left{
+  animation-play-state: paused;
+}
+
+
+#loading {
+  transition: all 2s; /*ローディングにかかる時間*/
+  background-color: #FFF;
+  z-index: 999;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ローディング画面の設定 */
+
+.sp {
+  width: 32px;
+  height: 32px;
+  clear: both;
+}
+.sp-hydrogen {
+  position: relative;
+  border: 1px #000 solid;
+  border-radius: 50%;
+  -webkit-animation: spHydro 0.6s infinite linear;
+  animation: spHydro 0.6s infinite linear;
+}
+.sp-hydrogen:before, .sp-hydrogen:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+.sp-hydrogen:before {
+  top: calc( 50% - 5px );
+  left: calc( 50% - 5px );
+}
+.sp-hydrogen:after {
+  top: -1px;
+  left: -1px;
+}
+@-webkit-keyframes spHydro {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes spHydro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}

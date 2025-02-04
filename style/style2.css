@@ -1,0 +1,195 @@
+@charaset "UTF-8";
+/* HOME画面用 CSS*/
+
+html{
+    font-size:100%; /*ユーザー設定の文字サイズを正しく反映*/
+}
+*{
+    box-sizing:border-box; /*余白や線を幅や高さに含める*/
+}
+
+/*ページ全体 CSS*/
+
+body{height:100%;
+     margin:0;
+     padding:0;
+     font-family:"Yu Gothic",Yu Gothic,"MS Pゴシック"Meiryo;
+}
+
+/*ヘッダー CSS*/
+
+header{justify-content:space-between;       
+       background-color:###;
+       display:flex;
+       margin:0;
+       padding:0  2%;
+       align-items:center;
+       
+}
+#rogo{
+      max-width:100%; /*画像が親要素からはみ出すのを防ぐ*/
+      height:auto;
+}
+
+/*ナビゲーション CSS*/
+
+ul{display:flex;
+   list-style:none;
+}
+
+nav{margin-left;auto;
+}
+
+.navi{margin-left:15px;
+}
+
+a{text-decoration:none;
+  color:black;
+  font-size:13px;
+}
+
+a:hover{opacity:0.5;
+}
+
+/*メインコンテンツ CSS*/
+
+main{  background-color:###;
+       margin:0;
+       overflow:hidden;
+
+}
+
+
+.main-images{
+  display: flex;
+  flex-direction: column;
+}
+
+.main-center{
+   align-items: center;
+   padding-top:40px;
+}
+
+
+.gra{
+  padding-bottom:200px;
+  
+}
+
+/*作品の設定ホバー時に色を付ける*/
+
+.no1 img{
+ width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.no1 img:hover{
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+.no2 img{
+ width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.no2 img:hover{
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+.no3 img{
+ width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.no3 img:hover{
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+.no4 img{
+ width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.no4 img:hover{
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+.no5 img{
+ width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.no5 img:hover{
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+.no6 img{
+ width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.no6 img:hover{
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+.no7 img{
+ width: 100%;
+  transform: scale(1.1);
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition-duration: 0.4s;
+}
+
+.no7 img:hover{
+  filter: grayscale(0);
+  transition-duration: 0.4s;
+}
+
+
+
+article{
+}
+
+
+/*フッター CSS*/
+
+footer{margin:0;
+       padding:0  2%;
+       height:5%;
+       background-color:###;
+       display:flex;
+       justify-content:space-between;
+       align-items:center;
+}
+
+#jikoku_now{font-size:10px;}
+
+
+.icon{margin-left:8px;
+}
+
+.moji{font-size:10px;}
