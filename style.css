@@ -1,1 +1,225 @@
+/* ==========================
+   共通設定
+========================== */
+@charset "UTF-8";
 
+html {
+    font-size: 100%; /* ユーザー設定の文字サイズを正しく反映 */
+}
+
+* {
+    box-sizing: border-box; /* 余白や線を幅や高さに含める */
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic", Yu Gothic, "MS Pゴシック", Meiryo;
+}
+
+/* ==========================
+   ヘッダー
+========================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 2%;
+    background-color: var(--main-bg-color, #fff); /* カスタマイズ可能な変数導入 */
+}
+
+#rogo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================
+   ナビゲーション
+========================== */
+ul {
+    display: flex;
+    list-style: none;
+}
+
+nav {
+    margin-left: auto;
+}
+
+.navi {
+    margin-left: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+/* ==========================
+   メインコンテンツ
+========================== */
+main {
+    background-color: var(--main-bg-color, #fff);
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-center {
+    align-items: center;
+    padding-top: 40px;
+}
+
+.gra {
+    padding-bottom: 200px;
+}
+
+/* ==========================
+   画像ホバーエフェクト（共通化）
+========================== */
+[class^="no"] img {
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+[class^="no"] img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* ==========================
+   無限スクロールアニメーション
+========================== */
+@keyframes infinity-scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes infinity-scroll-right {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.scroll-infinity__wrap {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll-infinity__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.scroll-infinity__list--left {
+    animation: infinity-scroll-left 35s infinite linear 0.5s both;
+}
+
+.scroll-infinity__list--right {
+    animation: infinity-scroll-right 35s infinite linear 0.5s both;
+}
+
+.scroll-infinity__wrap:hover .scroll-infinity__list {
+    animation-play-state: paused;
+}
+
+/* ==========================
+   ローディング画面
+========================== */
+#loading {
+    transition: all 2s;
+    background-color: #FFF;
+    z-index: 999;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sp {
+    width: 32px;
+    height: 32px;
+}
+
+.sp-hydrogen {
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 50%;
+    animation: spHydro 0.6s infinite linear;
+}
+
+.sp-hydrogen:before, .sp-hydrogen:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.sp-hydrogen:before {
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+}
+
+.sp-hydrogen:after {
+    top: -1px;
+    left: -1px;
+}
+
+@keyframes spHydro {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(359deg); }
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ==========================
+   フッター
+========================== */
+footer {
+    margin: 0;
+    padding: 0 2%;
+    height: 5%;
+    background-color: var(--main-bg-color, #fff);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#jikoku_now {
+    font-size: 10px;
+}
+
+.icon {
+    margin-left: 8px;
+}
+
+.moji {
+    font-size: 10px;
+}
+
+/* ==========================
+   **重複の削除**
+   - body, html, header, nav, footer の記述を統一
+   - 画像ホバーエフェクトを共通クラスに統一
+   - 無限スクロールの共通化
+   - ローディングアニメーションの整理
+========================== */
